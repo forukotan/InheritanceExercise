@@ -28,12 +28,36 @@ namespace Inheritance
              *  
              * Creatively display the class member values 
              */
+            var tucan = new Bird();
+            tucan.beakLength = 2;
+            tucan.hasTalons = false;
+            tucan.colorFeathers = "black";
+            tucan.diet = "fruit";
+
+
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *  
              * Creatively display the class member values 
              */
+            var gecko = new Reptile();
+            gecko.IsScaly = true;
+            gecko.ColdBlooded = true;
+            gecko.Diet = "insects";
+            gecko.Habitat = "watery place";
+            gecko.legs = 4;
+
+            var myAnimals = new Animal[] { tucan, gecko };
+            foreach (var animal in myAnimals )
+            {
+                Console.WriteLine($"Legs:{animal.legs}");
+                Console.WriteLine($"Fur:{animal.hasFur}");
+                Console.WriteLine($"Tail:{animal.hasTail}");
+                Console.WriteLine($"Teeth:{animal.teeth}");
+                Console.WriteLine($"");
+
+            }
         }
     }
 }
